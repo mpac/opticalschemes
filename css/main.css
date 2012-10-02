@@ -1,0 +1,47 @@
+/*
+Copyright 2012, Michael Pacchioli.
+ 
+This file is part of Optical Schemes.
+
+Optical Schemes is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License, version 3,
+as published by the Free Software Foundation.
+
+Optical Schemes is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Optical Schemes.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+input#keywords {
+    height: 24px;
+}
+
+#results {
+    display: none;
+}
+
+.palette {
+    margin-bottom: 25px;
+}
+
+.stripes {
+    border: 1px solid black;
+}
+
+.art-title {
+    float: left;
+    margin-right: 10px;
+}
+
+.clear {
+    clear: both;
+}
