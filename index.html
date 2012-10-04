@@ -20,36 +20,119 @@
 
 <body>
 
-    <div class="container" style="width:85%;">
+<div id="browser-modal" class="modal hide fade" aria-hidden="true">
+    <div class="modal-body">
+	<p>This site has been tested with recent versions of Firefox and Chrome.</p>
+	<p>Please contact us if you're interested in testing with IE, Safari, Opera, or other browsers.</p>
+    </div>
 
-      <div>
-        <br/>
-        <center><h2>computer art with color schemes</h2></center>
+    <div class="modal-footer"> 
+	<a href="#" class="btn" data-dismiss="modal" aria-hidden="true">Close</a>
+    </div>
+</div>
+
+<div id="acknowledgements-modal" class="modal hide fade">
+    <div class="modal-body">
+	<p>Concept and programming by Michael Pacchioli.</p>
+	<p>JavaScript assistance provided by Jacky Alciné</p>
+	
+	<p>
+	    This site would not be possible without the many users designing
+	    and sharing color palettes on <a target="_blank" href="http://www.colourlovers.com">COLOURlovers</a>.
+	</p>
+	
+	<p>
+	    Special thanks also to the original authors of the fantastic HTML5 demos
+	    we modified for this project:
+	</p>
+	
+	<ul>
+	    <li>
+		Daniel Puhe
+		for
+		<a target="_blank" href="http://www.spielzeugz.de/html5/liquid-particles.html">Liquid Particles</a>
+	    </li>
+	    <li>
+		Mr. Doob
+		for
+		<a target="_blank" href="http://mrdoob.com/91/Ball_Pool">Ball Pool</a>
+	    </li>
+	    <li>
+		Paul Hamill
+		for
+		<a target="_blank" href="http://3.paulhamill.com/node/39">Bubbles</a>
+	    </li>
+	    <li>
+		Simon Baird
+		for
+		<a target="_blank" href="http://randomibis.com/coolclock/">CoolClock</a>
+	    </li>
+	    <li>
+		Kenneth Kufluk
+		for
+		<a target="_blank" href="http://js-fireworks.appspot.com/">js-fireworks</a>
+	    </li>
+	    <li>
+		Christophe Résigné
+		for
+		<a target="_blank" href="http://www.chiptune.com/starfield/starfield.html">Starfield</a>
+	    </li>
+	    <li>
+		Seb Lee-Delisle
+		for
+		<a target="_blank" href="http://seb.ly/demos/html5landscape.html">3D Landscape</a>
+	    </li>
+	    <li>
+		Ben Joffe
+		for
+		<a target="_blank" href="http://www.benjoffe.com/code/demos/canvascape">Canvascape</a>
+	    </li>
+	    <li>
+		grenlibre.fr
+		for
+		<a target="_blank" href="http://flashcanvas.net/examples/grenlibre.fr/demo/same/">Same Game</a>
+	    </li>
+	</ul>
+    </div>
+
+    <div class="modal-footer">
+	<a href="#" class="btn" data-dismiss="modal">Close</a>
+    </div>
+</div>
+
+<div class="container" style="width:85%;"> 
+    <div>
 	<br/>
+	<center><h2>computer art with color schemes</h2></center>
+	<br/>
+
+	<p>First search for any word to explore COLOURlovers schemes.</p>
+	<p>Then click on the links to see the schemes applied to popular HTML5 art!</p>
+	    
+	<p>
+	    Please read our
+	    <a href="#acknowledgements-modal" data-toggle="modal">acknowledgements</a>.
+	</p>	
+	
+	<br/><br/>
 	
 	<form id="form1">
-	  <p>First search for any word to explore COLOURlovers schemes.</p>
-	  <p>Then click on the links to see the schemes applied to popular HTML5 art!</p>
-	  
-	  <br/><br/>
-	  
-	  <input id="keywords" type="text" class="span3" placeholder="Type something..."><br/>
-	  <button type="submit" class="btn btn-primary btn-large">Submit &raquo;</button>  
+	    <input id="keywords" type="text" class="span3" placeholder="Type something..."><br/>
+	    <button type="submit" class="btn btn-primary btn-large">Submit &raquo;</button>  
 	</form>  	
-      </div>
-    
-      <div id="results">
-	<br/><br/><br/>
-	
-	<center><h2>results</h2></center>
-	
-	<br/>
-	
-	<div id="palettes"></div>
-      </div>
-    
     </div>
-      
+
+    <div id="results">
+	<br/><br/><br/>
+
+	<center><h2>results</h2></center>
+
+	<br/>
+
+	<div id="palettes"></div>
+    </div>
+</div>
+
 </body>
 
 </html>

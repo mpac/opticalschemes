@@ -34,9 +34,9 @@ var art = [
 
 $(document).ready(function() {
 
-    // if ($.browser.msie) {
-    // 	alert("This site has only been tested with Chrome and Firefox.  Please contact us if you're interested in testing with Safari, IE, Opera, and other browsers");
-    // }
+    if (!$.browser.webkit && !$.browser.mozilla) {
+	$('#browser-modal').modal('show');
+    }
 
     $('#form1').submit(function() {
 	keywords = $('#keywords').val();
