@@ -73,13 +73,19 @@ function generateMenu(palettes) {
 	var stripesDIV = $('<div class="stripes"></div>');
 	var artListDIV = $('<div class="art-list"></div>');
         
+	title =
+	    '<b>' + palette.title + '</b>'
+	    + ' by <a target="_blank" href="' + palette.url + '">' + palette.userName + '</a>'
+	;
+	    
+	paletteDIV.append(title);	
+	
 	$.each(palette.colors, function(i, color) {
 	    stripesDIV.append(
 		$("<div>&nbsp;</div>").css("background", "#" + color)
 	    );
         });
-	
-	paletteDIV.append(palette.title);
+
 	paletteDIV.append(stripesDIV);
 	
 	var artList = '';
