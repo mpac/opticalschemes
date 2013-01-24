@@ -22,11 +22,11 @@ var art = [
     {title: 'Liquid Particles', url: '/liquid-particles/liquid-particles.html'},
     {title: 'Ball Pool', url: '/ball-pool/ball-pool.html'},
     {title: 'Bubbles', url: '/bubbles/bubbles.html'},
-    {title: 'CoolClock', url: '/coolclock/coolclock.html'},
-    {title: 'js-fireworks', url: '/js-fireworks/js-fireworks.html', text: true},
+    {title: 'CoolClock', url: '/coolclock/coolclock.html', webkitOnly: true},
+    {title: 'js-fireworks', url: '/js-fireworks/js-fireworks.html', text: true, webkitOnly: true},
     {title: 'Starfield', url: '/starfield/starfield.html'},
     {title: 'Starfield with flux', url: '/starfield-flux/starfield-flux.html'},
-    {title: '3D Landscape', url: '/3d-landscape/3d-landscape.html'},
+    {title: '3D Landscape', url: '/3d-landscape/3d-landscape.html', webkitOnly: true},
     {title: 'Canvascape', url: '/canvascape/canvascape.html'},
     {title: 'Same Game', url: '/same/same.html'},
 ];
@@ -34,9 +34,10 @@ var art = [
 
 $(document).ready(function() {
 
-    if (!$.browser.webkit && !$.browser.mozilla) {
-	$('#browser-modal').modal('show');
+    if (!$.browser.webkit) {
+        $('#browser-modal').modal('show');
     }
+
 
     $('#form1').submit(function() {
 	keywords = $('#keywords').val();
@@ -92,6 +93,8 @@ function generateMenu(palettes) {
 	var paramString = '';
 	
 	$.each(art, function(i, data) {
+	    if (!$.browser.webkit && data.webkitOnly) { return; }
+
 	    // console.log(data);
 	    paramString = '?colors=';
 
@@ -116,3 +119,4 @@ function generateMenu(palettes) {
 	$('#palettes').append(paletteDIV);
     });   
 }
+
